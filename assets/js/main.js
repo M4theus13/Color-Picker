@@ -1,5 +1,6 @@
 import { hslToHex } from "./hslToHex.js"
 import { hexToRgb } from "./hslToRgb.js"
+import { copy } from "./copy.js"
 
 const colorPreview = document.querySelector('.preview')
 const colorSlider = document.getElementById('hue-slider')
@@ -68,6 +69,8 @@ function atualizarCor () {
     boxRgb.innerHTML = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})` 
     boxHex.innerHTML = hex
     boxHsl.innerHTML = hsl
+
+    copy()
 }
 
 atualizarCor()

@@ -143,6 +143,7 @@ main .preview {
     border-radius: 3px;
     margin: 10px;
     font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
 }
 
 #colors-hex {
