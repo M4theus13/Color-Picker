@@ -35,6 +35,7 @@ main>span {
     line-height: 38px;
     text-align: center;
     margin: 300px 0 20px;
+    z-index: 1;
 }
 
 i {
@@ -127,7 +128,6 @@ main .preview {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
     width: 100%;
     max-width: 600px;
     position: relative;
@@ -157,20 +157,25 @@ main .preview {
 #colors-hsl {
     width: 220px;
 }
-
+@media screen and (width < 1024px) {
+    .text-copy {
+        display: none;
+    }
+}
 @media screen and (width < 680px) {
     .colors {
-        margin-bottom: 75px;
+        margin-bottom: 5px;
     }
+
+    main .controls {
+        gap: 12px;
+    }
+    
 }
 
 @media screen and (width < 440px) {
     main>span {
         margin-top: 135px;
-    }
-
-    .controls {
-        margin-top: 50px;
     }
 
     main .preview {
