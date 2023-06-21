@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Control</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <main>
+        <div class="preview"></div>
+        <span>Ajuste de Ilumunação</span>
+
+        <div class="controls">
+            <div class="hue">
+                <i class="ph-thin ph-palette"></i>
+                <div>
+                    <input type="range" id="hue-slider" min="0" max="360" step="1" value="0">
+                </div>
+            </div>
+
+            <div class="brightness">
+                <i class="ph-thin ph-sun"></i>
+                <div>
+                    <input type="range" id="brightness-slider" min="0" max="100" step="1" value="100">
+                </div>
+            </div>
+
+            <div class="contrast">
+                <i class="ph-thin ph-circle-half"></i>
+                <div>
+                    <input type="range" id="contrast-slider" min="0" max="100" step="1" value="100">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
