@@ -3,41 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RGB Control</title>
+    <title>Color Picker</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/rgb.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <main>
-        <div class="preview"></div>
-        <span>Ajuste de Ilumunação</span>
-
+        <div class="preview" id="preview"></div>
+        <span>Ajuste de Cor</span>
+        <div class="colors">
+            <span class="colors-code" id="colors-hex">#ffffff</span>
+            <span class="colors-code" id="colors-rgb">rgb(100, 100, 100, 1)</span>
+            <span class="colors-code" id="colors-hsl">hsl(100, 50%, 100%, 1)</span>
+            <span>clique para copiar</span>
+        </div>
         <div class="controls">
             <div class="hue">
                 <i class="ph-thin ph-palette"></i>
-                <div>
+                <div id="box-input-hue">
                     <input type="range" id="hue-slider" min="0" max="360" step="1" value="0">
                 </div>
-            </div>
-
-            <div class="brightness">
-                <i class="ph-thin ph-sun"></i>
-                <div>
-                    <input type="range" id="brightness-slider" min="0" max="100" step="1" value="100">
-                </div>
+                <span class="value" id="hue-value">0</span>
             </div>
 
             <div class="contrast">
                 <i class="ph-thin ph-circle-half"></i>
-                <div>
+                <div id="box-input-constrast">
                     <input type="range" id="contrast-slider" min="0" max="100" step="1" value="100">
                 </div>
+                <span class="value" id="contrast-value">100</span>
+            </div>
+
+            <div class="brightness">
+                <i class="ph-thin ph-sun"></i>
+                <div id="box-input-brightness">
+                    <input type="range" id="brightness-slider" min="0" max="100" step="1" value="50">
+                </div>
+                <span class="value" id="brightness-value">50</span>
+            </div>
+
+            <div class="opacity">
+                <i class="ph ph-gradient"></i>
+                <div id="box-input-opacity">
+                    <input type="range" id="opacity-slider" min="0" max="1" step="0.01" value="50">
+                </div>
+                <span class="value" id="opacity-value">1</span>
             </div>
         </div>
     </main>
-    <script src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

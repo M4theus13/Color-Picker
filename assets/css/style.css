@@ -16,9 +16,11 @@ body {
 }
 
 main {
-    width: 430px;
-    height: 932px;
-    background-color: #151515;
+    width: 100%;
+    max-width: 730px;
+    height: 100%;
+    max-height: 932px;
+    background-color: #282828;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,11 +30,11 @@ main {
     position: relative;
 }
 
-span {
+main>span {
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    margin: 350px 0 100px;
+    margin: 300px 0 20px;
 }
 
 i {
@@ -43,53 +45,62 @@ main .controls {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 321px;
-    gap: 82px;
+    gap: 32px;
     position: relative;
 }
 
-.hue, .brightness, .contrast {
+.hue, .brightness, .contrast, .opacity {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.hue>div, .brightness>div, .contrast>div {
+#box-input-hue, #box-input-brightness, #box-input-constrast, #box-input-opacity {
     display: flex;
     align-items: center;
-    height: 5px;
+    height: 18px;
     border-radius: 12px;
     background-color: #fff;
+    border: 1px solid black;
+    background-image: url('/assets/img/opacity.png');
+    background-size: cover;
 }
 
-.hue>div {
+#box-input-hue {
     background: linear-gradient(to right, red, yellow, lime, aqua, blue, magenta, red);
 }
 
+#box-input-brightness {
+    background: linear-gradient(to right, black, red, white);
+}
+
+#box-input-constrast {
+    background: linear-gradient(to right, #808080, red);
+}
+
+#box-input-opacity {
+    background: linear-gradient(90deg ,hsla(0, 100%, 100%, 0) 0%, hsl(0, 100%, 50%, 1) 100% );
+}
+
 input[type='range'] {
-    width: 281px;
-    height: 5px;
+    width: 261px;
+    height: 18px;
     appearance: none;
+    border-radius: 12px;
     background-color: transparent;
 }
 
-.hue>div>input[type='range']::-webkit-slider-thumb,
-.brightness>div>input[type='range']::-webkit-slider-thumb,
-.contrast>div>input[type='range']::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
     width: 18px;
     height: 18px;
-    border: 3px solid #fff;
+    border: 3px solid #000;
     background-color: transparent;
     appearance: none;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
-}
-
-.brightness>div>input[type='range']::-webkit-slider-thumb,
-.contrast>div>input[type='range']::-webkit-slider-thumb {
-    background-color: #151515;
+    background-color: #fff;
 }
 
 main .preview {
@@ -100,5 +111,75 @@ main .preview {
     border-radius: 50%;
     box-shadow: 0px 0px 53px 13px red;
     position: absolute;
-    top: -500px;
+    top: -550px;
 }
+
+.value {
+    background-color: #202020;
+    border: 1px solid black  ;
+    padding: 10px;
+    border-radius: 3px;
+    width: 48px;
+    text-align: center;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.colors-code {
+    text-align: center;
+    background-color: #202020;
+    border: 1px solid black  ;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#colors-hex {
+    width: 100px;
+}
+
+#colors-rgb {
+    width: 200px;
+}
+
+#colors-hsl {
+    width: 220px;
+}
+
+@media screen and (width < 680px) {
+    .colors {
+        margin-bottom: 75px;
+    }
+}
+
+@media screen and (width < 440px) {
+    main>span {
+        margin-top: 135px;
+    }
+
+    .controls {
+        margin-top: 50px;
+    }
+
+    main .preview {
+        top: -690px;
+    }
+}
+
+@media screen and (width < 390px) {
+    #box-input-hue, #box-input-brightness, #box-input-constrast, #box-input-opacity {
+        width: 190px;
+    }
+}
+
