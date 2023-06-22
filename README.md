@@ -2,6 +2,7 @@
 
 <p align="center">
  <a href="https://github.com/M4theus13/Color-Picker#descri%C3%A7%C3%A3o-do-projeto">Descrição do Projeto</a> •
+ <a href="https://github.com/M4theus13/Color-Picker#funcionalidades">Funcionalidades</a> • 
  <a href="https://github.com/M4theus13/Color-Picker#resultado">Resultado</a> • 
  <a href="https://github.com/M4theus13/Color-Picker#--tecnologias-">Tecnologias</a>
 </p>
@@ -10,7 +11,7 @@
 
 <h4 align="center"> ✅ Color-Picker 🚀 Finalizado ✅ </h4>
 
-<p align="center">Projeto criado do desafio #boracodar da Rocketseat</p>
+<p align="center">Projeto criado do desafio #boracodar da <a href="https://github.com/Rocketseat">Rocketseat</a></p>
 
 <p align="center">Site de seletor de cores com as opções de, cor, contraste, brilho e opacidade</p>
 
