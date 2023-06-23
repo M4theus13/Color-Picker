@@ -15,7 +15,7 @@
 
 <p align="center">Site de seletor de cores com as opções de, cor, contraste, brilho e opacidade</p>
 
-<p align="center">Para testar o projeto, segue o <a href="https://colorpiker.bohr.io" >Link</a></p>
+<p align="center">Para testar o projeto, segue o <a href="https://colorpicker.bohr.io" >Link</a></p>
 
 <h2 align="center">Funcionalidades</h2>
 
