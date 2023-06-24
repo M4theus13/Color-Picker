@@ -11,8 +11,6 @@
 
 <h4 align="center"> ✅ Color-Picker 🚀 Finalizado ✅ </h4>
 
-<p align="center">Projeto criado do desafio #boracodar da <a href="https://github.com/Rocketseat">Rocketseat</a></p>
-
 <p align="center">Site de seletor de cores com as opções de, cor, contraste, brilho e opacidade</p>
 
 <p align="center">Para testar o projeto, segue o <a href="https://colorpicker.bohr.io" >Link</a></p>
